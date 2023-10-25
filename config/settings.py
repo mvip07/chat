@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-zf2@f%-wq^wc^(i8m#3@+vagzbswqcy!fvub8vf7a!pxak$wsz
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*', ' vercel.app', '127.0.0.1:8000']
+ALLOWED_HOSTS = ['.vercel.app', '.now.sh', '127.0.0.1:8000']
 
 
 # Application definition
@@ -137,9 +137,8 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
-STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_DIRS = [BASE_DIR/'static']
+STATIC_ROOT = BASE_DIR/'staticfiles'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

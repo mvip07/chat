@@ -24,7 +24,7 @@ schema_view = get_schema_view(
     openapi.Info(
         title='User Api',
         description='User project APIsi',
-        default_version='v1',
+        default_version='v 1.0.0',
         terms_of_service='http://www.google.com/policcies/terms/',
         contact=openapi.Contact(email='axmatovkamoljon08@gmail.com'),
         license=openapi.License(name='Blog project litsenziyasi'),       
@@ -35,7 +35,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/v1/', include('users.urls')),
+    path('api/', include('users.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path('api/allauth/', include('allauth.urls')),
     path('swagger/', schema_view.with_ui(
